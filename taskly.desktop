@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Taskly
+GenericName=Görev Yöneticisi
+Comment=Taskly To-Do List with Cloud Sync
+Exec=/usr/bin/taskly
+Icon=taskly
+Terminal=false
+Categories=Utility;Office;ProjectManagement;
+StartupWMClass=taskly
+Keywords=task;todo;gorev;taskly;
