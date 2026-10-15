@@ -1,56 +1,101 @@
 # 📝 Taskly
 
-> **Taskly** is a sleek, responsive, and minimalist to-do list application crafted with Flutter, featuring bidirectional real-time cloud synchronization between **Android**, **Linux Desktop**, and the **Web**.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/mebsoruhavuzu-boop/taskly/main/docs/screenshots/feature_graphic.png" alt="Taskly Feature Graphic" width="100%">
+</p>
 
-[![Release](https://img.shields.io/github/v/release/mebsoruhavuzu-boop/taskly?style=flat-square)](https://github.com/mebsoruhavuzu-boop/taskly/releases/latest)
-[![Google Play](https://img.shields.io/badge/Google_Play-Taskly-green?logo=google-play&style=flat-square)](https://play.google.com/store/apps/details?id=com.note.taskly)
-[![Arch Linux AUR](https://img.shields.io/badge/AUR-taskly--bin-blue?logo=arch-linux&style=flat-square)](https://aur.archlinux.org/packages/taskly-bin)
-[![Web App](https://img.shields.io/badge/Web_App-Live-orange?logo=firebase&style=flat-square)](https://taskly-notes.web.app)
+<p align="center">
+  <strong>Taskly</strong> is a sleek, responsive, and minimalist to-do list application crafted with Flutter, featuring real-time bidirectional cloud synchronization between <strong>Android</strong>, <strong>Linux Desktop</strong>, and the <strong>Web</strong>.
+</p>
 
----
-
-## ✨ Features
-
-- 🔄 **Real-Time Cloud Sync:** Effortless bidirectional synchronization via Google / Firebase across Android, Linux, and Web.
-- ⚡ **Offline-First:** Seamlessly create, edit, reorder, and complete tasks without internet connection; syncs automatically once reconnected.
-- ⏰ **Due Dates & Reminders:** Set deadlines with localized date/time picker and receive timely notifications.
-- 🏷️ **Categories, Tags & Search:** Organize your productivity with custom tags (`#tag`), categories, and instant real-time search.
-- 📋 **Checklists & Subtasks:** Break complex tasks into manageable subtasks with progress tracking.
-- 🎨 **Themes & Aesthetics:** Light mode, Dark mode, and true AMOLED black mode with customizable accent colors.
-- 📱 **Android Home Screen Widget:** Monitor your active tasks and count directly from your phone's home screen.
-- 🐧 **Linux Desktop Integration:** Native system tray support, minimize-to-tray, and D-Bus desktop notifications.
+<p align="center">
+  <a href="https://play.google.com/store/apps/details?id=com.note.taskly"><img src="https://img.shields.io/badge/Google_Play-Taskly-green?logo=google-play&style=for-the-badge" alt="Google Play"></a>
+  <a href="https://taskly-notes.web.app"><img src="https://img.shields.io/badge/Web_App-Live-orange?logo=firebase&style=for-the-badge" alt="Web App"></a>
+  <a href="https://github.com/mebsoruhavuzu-boop/taskly/releases/latest"><img src="https://img.shields.io/github/v/release/mebsoruhavuzu-boop/taskly?style=for-the-badge&logo=github" alt="Latest Release"></a>
+</p>
 
 ---
 
-## 🚀 Installation
+## 📱 Screenshots
 
-### 🐧 Arch Linux (AUR)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/mebsoruhavuzu-boop/taskly/main/docs/screenshots/home_tasks.png" width="30%" alt="Tasks List">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/mebsoruhavuzu-boop/taskly/main/docs/screenshots/folders.png" width="30%" alt="Categories & Folders">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/mebsoruhavuzu-boop/taskly/main/docs/screenshots/splash.png" width="30%" alt="Splash Screen">
+</p>
 
-Taskly is available on Arch Linux via the AUR (`taskly-bin`):
+---
 
+## 🔄 How Cloud Synchronization Works
+
+Taskly is designed around an **Offline-First, Real-Time Sync** architecture:
+
+1. **Sign In With Google:**
+   - On **Android**: Tap the account icon in Settings or the drawer and sign in with your Google Account.
+   - On **Linux Desktop**: Sign in using your browser via secure loopback OAuth.
+   - On **Web**: Visit [taskly-notes.web.app](https://taskly-notes.web.app) and sign in.
+2. **Instant Bidirectional Sync:**
+   - Any task created, edited, categorized, or marked as completed on your phone instantly reflects on your Linux desktop via **Firebase Realtime SSE (Server-Sent Events)** streams.
+   - If you work offline on your laptop during a flight or without Wi-Fi, your changes are queued and automatically merge safely when you reconnect without overwriting newer data.
+3. **Data Integrity & Tombstone Deletion:**
+   - Deleted tasks are tracked with timestamps to ensure deletions sync across all paired devices cleanly.
+
+---
+
+## ✨ Key Features
+
+- ⚡ **Offline-First Productivity:** Work anywhere, anytime without an active internet connection.
+- ⏰ **Due Dates & Deadlines:** Set exact due dates and times with countdown badges.
+- 🔔 **Native Notifications:** 
+  - Android: Timely reminders and system alerts.
+  - Linux: D-Bus desktop notifications and system tray support (minimizes to tray when closed).
+- 🏷️ **Tags & Smart Search:** Tag tasks with `#tags` and filter by category or instant search.
+- 📋 **Subtasks (Checklists):** Break large tasks into smaller action items with visual completion progress.
+- 🎨 **Aesthetic Themes:** Light, Dark, and deep AMOLED Black modes with custom accent colors.
+- 📱 **Home Screen Widget:** Android 4x2 interactive home widget showing your pending tasks and quick status.
+
+---
+
+## 🚀 Installation Guide
+
+### 🐧 Linux (Arch Linux / Manjaro / EndeavourOS)
+
+#### Option 1: Using makepkg from source (Recommended)
 ```bash
-# Using yay
-yay -S taskly-bin
-
-# Using paru
-paru -S taskly-bin
+git clone https://github.com/mebsoruhavuzu-boop/taskly.git
+cd taskly
+makepkg -si
 ```
 
-Or download the latest release binary tarball directly from:  
-👉 [Taskly v1.0.9 Releases](https://github.com/mebsoruhavuzu-boop/taskly/releases/latest)
+#### Option 2: Prebuilt Binary Tarball
+Download the standalone executable bundle from [GitHub Releases](https://github.com/mebsoruhavuzu-boop/taskly/releases/latest):
+```bash
+tar -xzf taskly-1.0.9-x86_64.tar.gz
+cd taskly-1.0.9-x86_64
+./taskly
+```
+
+#### Option 3: AUR Package (When registrations reopen)
+Once official AUR registration opens, install with any AUR helper:
+```bash
+yay -S taskly-bin
+```
+
+---
 
 ### 📱 Android
+Install directly from the **Google Play Store**:  
+👉 **[Download Taskly on Google Play](https://play.google.com/store/apps/details?id=com.note.taskly)**
 
-Install directly from **Google Play Store**:  
-👉 [Taskly on Google Play](https://play.google.com/store/apps/details?id=com.note.taskly)
+---
 
-### 🌐 Web App
-
-Use Taskly right inside your browser without installing anything:  
-👉 [https://taskly-notes.web.app](https://taskly-notes.web.app)
+### 🌐 Web Browser
+Open Taskly on any operating system without installing:  
+👉 **[Open Web Application](https://taskly-notes.web.app)**
 
 ---
 
 ## 📄 License
-
-Distributed under the MIT License.
+This project is licensed under the MIT License - see the LICENSE file for details.
