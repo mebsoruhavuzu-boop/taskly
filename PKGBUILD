@@ -1,23 +1,25 @@
 # Maintainer: Ismail Aslan <ismailaslan7879@gmail.com>
 pkgname=taskly-bin
-pkgver=1.0.9
+pkgver=1.0.11
 pkgrel=1
 pkgdesc="Flutter tabanlı, Android ve Linux arasında Google hesaplı çift yönlü görev senkronizasyonu sağlayan yapılacaklar listesi uygulaması"
 arch=('x86_64')
 url="https://github.com/mebsoruhavuzu-boop/taskly"
 license=('MIT')
-depends=('gtk3' 'glib2' 'libepoxy')
+depends=('gtk3' 'glib2' 'libepoxy' 'libayatana-appindicator' 'libdbusmenu-glib')
 provides=('taskly')
 conflicts=('taskly')
+# Önceden derlenmiş Flutter ELF içeriğini yeniden strip/debug işlemine sokma.
+options=('!strip' '!debug')
 
 source=(
-  "taskly-${pkgver}-x86_64.tar.gz::https://github.com/mebsoruhavuzu-boop/taskly/releases/download/v${pkgver}/taskly-${pkgver}-x86_64.tar.gz"
+  "taskly-${pkgver}-x86_64.tar.gz::https://taskly-notes.web.app/downloads/taskly-${pkgver}-x86_64.tar.gz"
   "taskly.desktop"
   "taskly.png"
 )
 
 sha256sums=(
-  '60f094776308bf489440b74fcaea2acede910c081a8ba8c7455046eaa86bbf06'
+  '55e83f3fa6ec5c30cd13270a954ec2b4f79734c13109a68271435f92737cb28b'
   'db45e7a93c59b49b06833f19ca75eef01ca055d061d72bfa9810b03db20c2c8c'
   'a83767f8fdabc7a4fe028d6076473762ef88fd61f7c9064803b3b530137b94cf'
 )

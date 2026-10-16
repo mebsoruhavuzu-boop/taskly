@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.note.taskly"><img src="https://img.shields.io/badge/Google_Play-Taskly-green?logo=google-play&style=for-the-badge" alt="Google Play"></a>
   <a href="https://taskly-notes.web.app"><img src="https://img.shields.io/badge/Web_App-Live-orange?logo=firebase&style=for-the-badge" alt="Web App"></a>
-  <a href="https://github.com/mebsoruhavuzu-boop/taskly/releases/latest"><img src="https://img.shields.io/github/v/release/mebsoruhavuzu-boop/taskly?style=for-the-badge&logo=github" alt="Latest Release"></a>
+  <a href="https://taskly-notes.web.app/downloads.html">Download Taskly 1.0.11 — Linux / Arch</a>
 </p>
 
 ---
@@ -28,74 +28,50 @@
 
 ---
 
-## 🔄 How Cloud Synchronization Works
+## Taskly 1.0.11 — Linux / Arch Linux
 
-Taskly is designed around an **Offline-First, Real-Time Sync** architecture:
+Taskly is a Flutter to-do app with Turkish and English interfaces. Tasks sync across Android, Linux and the web when signed in with the same Google account. Offline changes merge when the app reconnects.
 
-1. **Sign In With Google:**
-   - On **Android**: Tap the account icon in Settings or the drawer and sign in with your Google Account.
-   - On **Linux Desktop**: Sign in using your browser via secure loopback OAuth.
-   - On **Web**: Visit [taskly-notes.web.app](https://taskly-notes.web.app) and sign in.
-2. **Instant Bidirectional Sync:**
-   - Any task created, edited, categorized, or marked as completed on your phone instantly reflects on your Linux desktop via **Firebase Realtime SSE (Server-Sent Events)** streams.
-   - If you work offline on your laptop during a flight or without Wi-Fi, your changes are queued and automatically merge safely when you reconnect without overwriting newer data.
-3. **Data Integrity & Tombstone Deletion:**
-   - Deleted tasks are tracked with timestamps to ensure deletions sync across all paired devices cleanly.
+**Current downloads:** [taskly-notes.web.app/downloads.html](https://taskly-notes.web.app/downloads.html)
 
----
+[Web app](https://taskly-notes.web.app/) · [Google Play](https://play.google.com/store/apps/details?id=com.note.taskly) · [Guide](https://taskly-notes.web.app/guide_taskly.html) · [Privacy](https://taskly-notes.web.app/privacy_taskly.html) · [Account deletion](https://taskly-notes.web.app/delete-account.html)
 
-## ✨ Key Features
+## Arch Linux installation
 
-- ⚡ **Offline-First Productivity:** Work anywhere, anytime without an active internet connection.
-- ⏰ **Due Dates & Deadlines:** Set exact due dates and times with countdown badges.
-- 🔔 **Native Notifications:** 
-  - Android: Timely reminders and system alerts.
-  - Linux: D-Bus desktop notifications and system tray support (minimizes to tray when closed).
-- 🏷️ **Tags & Smart Search:** Tag tasks with `#tags` and filter by category or instant search.
-- 📋 **Subtasks (Checklists):** Break large tasks into smaller action items with visual completion progress.
-- 🎨 **Aesthetic Themes:** Light, Dark, and deep AMOLED Black modes with custom accent colors.
-- 📱 **Home Screen Widget:** Android 4x2 interactive home widget showing your pending tasks and quick status.
+This repository provides the PKGBUILD installation recipe. **There is currently no official AUR listing for `taskly-bin`.**
 
----
-
-## 🚀 Installation Guide
-
-### 🐧 Linux (Arch Linux / Manjaro / EndeavourOS)
-
-#### Option 1: Using makepkg from source (Recommended)
 ```bash
 git clone https://github.com/mebsoruhavuzu-boop/taskly.git
 cd taskly
 makepkg -si
 ```
 
-#### Option 2: Prebuilt Binary Tarball
-Download the standalone executable bundle from [GitHub Releases](https://github.com/mebsoruhavuzu-boop/taskly/releases/latest):
+The recipe downloads the versioned Linux archive from Taskly Firebase Hosting, verifies its SHA-256 checksum, and installs the app in `/opt/taskly` with a launcher and desktop entry. GTK 3, libepoxy and the Ayatana AppIndicator runtime are declared as dependencies.
+
+Alternatively, download the ready-built Arch package from the downloads page and install it with:
+
 ```bash
-tar -xzf taskly-1.0.9-x86_64.tar.gz
-cd taskly-1.0.9-x86_64
-./taskly
+sudo pacman -U taskly-bin-1.0.11-1-x86_64.pkg.tar.zst
 ```
 
-#### Option 3: AUR Package (When registrations reopen)
-Once official AUR registration opens, install with any AUR helper:
+## Other Linux distributions (x86_64)
+
+Download `taskly-1.0.11-x86_64.tar.gz` and compare its checksum with the published `SHA256SUMS`. Extract the complete bundle:
+
 ```bash
-yay -S taskly-bin
+mkdir -p taskly-1.0.11
+tar -xzf taskly-1.0.11-x86_64.tar.gz -C taskly-1.0.11
+./taskly-1.0.11/taskly
 ```
 
----
+Keep `taskly`, `lib/`, and `data/` together. Install GTK 3 and the Ayatana AppIndicator runtime using your distribution's package manager. Linux reminders require the app to be running; web reminders are not supported.
 
-### 📱 Android
-Install directly from the **Google Play Store**:  
-👉 **[Download Taskly on Google Play](https://play.google.com/store/apps/details?id=com.note.taskly)**
+## 1.0.11 changes
 
----
+Deletion records no longer expire after 30 days, protecting against stale offline copies returning deleted tasks. All clients should be updated. Historical deletion records already removed by older versions cannot be recovered. Includes account switching, serialized local/cloud saves, reminder handling and truthful update status fixes from 1.0.10.
 
-### 🌐 Web Browser
-Open Taskly on any operating system without installing:  
-👉 **[Open Web Application](https://taskly-notes.web.app)**
+The current Linux/Arch binaries are distributed through the downloads page. Older GitHub Releases (including v1.0.9) remain historical artifacts. The Android store version depends on Google Play review and rollout.
 
----
+## Türkçe kısa bilgi
 
-## 📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+Güncel Linux ve Arch paketleri yukarıdaki indirme sayfasındadır. Bu depo kurulum tarifini içerir; resmî AUR kaydı değildir. Aynı Google hesabıyla Android, Linux ve web görevleri eşitlenir. Tüm cihazları güncelleyin. Linux hatırlatıcıları uygulama çalışırken kullanılır; web hatırlatıcıları desteklenmez.
