@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.note.taskly"><img src="https://img.shields.io/badge/Google_Play-Taskly-green?logo=google-play&style=for-the-badge" alt="Google Play"></a>
   <a href="https://taskly-notes.web.app"><img src="https://img.shields.io/badge/Web_App-Live-orange?logo=firebase&style=for-the-badge" alt="Web App"></a>
-  <a href="https://taskly-notes.web.app/downloads.html">Download Taskly 1.0.11 — Linux / Arch</a>
+  <a href="https://taskly-notes.web.app/downloads.html">Download Taskly 1.0.12 — Linux / Arch</a>
 </p>
 
 ---
@@ -28,7 +28,7 @@
 
 ---
 
-## Taskly 1.0.11 — Linux / Arch Linux
+## Taskly 1.0.12 — Linux / Arch Linux
 
 Taskly is a Flutter to-do app with Turkish and English interfaces. Tasks sync across Android, Linux and the web when signed in with the same Google account. Offline changes merge when the app reconnects.
 
@@ -51,26 +51,26 @@ The recipe downloads the versioned Linux archive from Taskly Firebase Hosting, v
 Alternatively, download the ready-built Arch package from the downloads page and install it with:
 
 ```bash
-sudo pacman -U taskly-bin-1.0.11-1-x86_64.pkg.tar.zst
+sudo pacman -U taskly-bin-1.0.12-1-x86_64.pkg.tar.zst
 ```
 
 ## Other Linux distributions (x86_64)
 
-Download `taskly-1.0.11-x86_64.tar.gz` and compare its checksum with the published `SHA256SUMS`. Extract the complete bundle:
+Download `taskly-1.0.12-x86_64.tar.gz` and compare its checksum with the published `SHA256SUMS`. Extract the complete bundle:
 
 ```bash
-mkdir -p taskly-1.0.11
-tar -xzf taskly-1.0.11-x86_64.tar.gz -C taskly-1.0.11
-./taskly-1.0.11/taskly
+mkdir -p taskly-1.0.12
+tar -xzf taskly-1.0.12-x86_64.tar.gz -C taskly-1.0.12
+./taskly-1.0.12/taskly
 ```
 
 Keep `taskly`, `lib/`, and `data/` together. Install GTK 3 and the Ayatana AppIndicator runtime using your distribution's package manager. Linux reminders require the app to be running; web reminders are not supported.
 
-## 1.0.11 changes
+## 1.0.12 changes
 
-Deletion records no longer expire after 30 days, protecting against stale offline copies returning deleted tasks. All clients should be updated. Historical deletion records already removed by older versions cannot be recovered. Includes account switching, serialized local/cloud saves, reminder handling and truthful update status fixes from 1.0.10.
+Task cards now feature a compact 1-line view with 'Read more' / 'Show less' expandable full text support. To provide a cleaner and faster experience, subtasks have been removed. Tag input text visibility was improved for both light and dark themes, and tags are now displayed with sleek modern chip badges. Sync, settings and external link improvements across Android, Linux and Web.
 
-The current Linux/Arch binaries are distributed through the downloads page. Older GitHub Releases (including v1.0.9) remain historical artifacts. The Android store version depends on Google Play review and rollout.
+The current Linux/Arch binaries are distributed through the downloads page. Older GitHub Releases remain historical artifacts. The Android store version depends on Google Play review and rollout.
 
 ## Türkçe kısa bilgi
 
