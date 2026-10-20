@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.note.taskly"><img src="https://img.shields.io/badge/Google_Play-Taskly-green?logo=google-play&style=for-the-badge" alt="Google Play"></a>
   <a href="https://taskly-notes.web.app"><img src="https://img.shields.io/badge/Web_App-Live-orange?logo=firebase&style=for-the-badge" alt="Web App"></a>
-  <a href="https://taskly-notes.web.app/downloads.html">Download Taskly 1.0.12 — Linux / Arch</a>
+  <a href="https://taskly-notes.web.app/downloads.html">Download Taskly 1.0.13 — Linux / Arch</a>
 </p>
 
 ---
@@ -28,7 +28,7 @@
 
 ---
 
-## Taskly 1.0.12 — Linux / Arch Linux
+## Taskly 1.0.13 — Linux / Arch Linux
 
 Taskly is a Flutter to-do app with Turkish and English interfaces. Tasks sync across Android, Linux and the web when signed in with the same Google account. Offline changes merge when the app reconnects.
 
@@ -51,27 +51,38 @@ The recipe downloads the versioned Linux archive from Taskly Firebase Hosting, v
 Alternatively, download the ready-built Arch package from the downloads page and install it with:
 
 ```bash
-sudo pacman -U taskly-bin-1.0.12-1-x86_64.pkg.tar.zst
+sudo pacman -U taskly-bin-1.0.13-1-x86_64.pkg.tar.zst
 ```
 
 ## Other Linux distributions (x86_64)
 
-Download `taskly-1.0.12-x86_64.tar.gz` and compare its checksum with the published `SHA256SUMS`. Extract the complete bundle:
+Download `taskly-1.0.13-x86_64.tar.gz` and compare its checksum with the published `SHA256SUMS`. Extract the complete bundle:
 
 ```bash
-mkdir -p taskly-1.0.12
-tar -xzf taskly-1.0.12-x86_64.tar.gz -C taskly-1.0.12
-./taskly-1.0.12/taskly
+mkdir -p taskly-1.0.13
+tar -xzf taskly-1.0.13-x86_64.tar.gz -C taskly-1.0.13
+./taskly-1.0.13/taskly
 ```
 
 Keep `taskly`, `lib/`, and `data/` together. Install GTK 3 and the Ayatana AppIndicator runtime using your distribution's package manager. Linux reminders require the app to be running; web reminders are not supported.
 
-## 1.0.12 changes
+## 1.0.13 changes
 
-Task cards now feature a compact 1-line view with 'Read more' / 'Show less' expandable full text support. To provide a cleaner and faster experience, subtasks have been removed. Tag input text visibility was improved for both light and dark themes, and tags are now displayed with sleek modern chip badges. Sync, settings and external link improvements across Android, Linux and Web.
+Version 1.0.13 delivers performance enhancements, smoother real-time cloud synchronization between Android, Linux Desktop, and Web, unified release synchronization across all platforms, and essential stability improvements.
 
 The current Linux/Arch binaries are distributed through the downloads page. Older GitHub Releases remain historical artifacts. The Android store version depends on Google Play review and rollout.
+
+## Platform Synchronization Policy / Platform Senkronizasyon Kuralı
+
+Taskly updates are strictly synchronized across all three distribution channels:
+1. **Google Play Store:** Official Android app releases (AAB/APK).
+2. **Arch Linux:** Built packages (`taskly-bin`) and download archives on Firebase Hosting.
+3. **GitHub Repository:** The `PKGBUILD`, `.SRCINFO` recipes and release notes.
+
+Whenever a new release is prepared, version tags, binaries, and build recipes across all three channels must remain in 100% lockstep parity.
 
 ## Türkçe kısa bilgi
 
 Güncel Linux ve Arch paketleri yukarıdaki indirme sayfasındadır. Bu depo kurulum tarifini içerir; resmî AUR kaydı değildir. Aynı Google hesabıyla Android, Linux ve web görevleri eşitlenir. Tüm cihazları güncelleyin. Linux hatırlatıcıları uygulama çalışırken kullanılır; web hatırlatıcıları desteklenmez.
+
+Sürüm 1.0.13 ile birlikte performans iyileştirmeleri, Android, Linux Masaüstü ve Web arasında daha akıcı gerçek zamanlı bulut senkronizasyonu, platformlar arası eşzamanlı sürüm uyumu ve daha temiz bir görev yönetimi deneyimi sunulmaktadır.
