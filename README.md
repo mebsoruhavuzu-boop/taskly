@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.note.taskly"><img src="https://img.shields.io/badge/Google_Play-Taskly-green?logo=google-play&style=for-the-badge" alt="Google Play"></a>
   <a href="https://taskly-notes.web.app"><img src="https://img.shields.io/badge/Web_App-Live-orange?logo=firebase&style=for-the-badge" alt="Web App"></a>
-  <a href="https://taskly-notes.web.app/downloads.html">Download Taskly 1.0.16 — Linux / Arch</a>
+  <a href="https://taskly-notes.web.app/downloads.html">Download Taskly 1.0.17 — Linux / Arch</a>
 </p>
 
 ---
@@ -28,7 +28,7 @@
 
 ---
 
-## Taskly 1.0.16 — Linux / Arch Linux
+## Taskly 1.0.17 — Linux / Arch Linux
 
 Taskly is a Flutter to-do app with Turkish and English interfaces. Tasks sync across Android, Linux and the web when signed in with the same Google account. Offline changes merge when the app reconnects.
 
@@ -51,24 +51,24 @@ The recipe downloads the versioned Linux archive from Taskly Firebase Hosting, v
 Alternatively, download the ready-built Arch package from the downloads page and install it with:
 
 ```bash
-sudo pacman -U taskly-bin-1.0.16-1-x86_64.pkg.tar.zst
+sudo pacman -U taskly-bin-1.0.17-1-x86_64.pkg.tar.zst
 ```
 
 ## Other Linux distributions (x86_64)
 
-Download `taskly-1.0.16-x86_64.tar.gz` and compare its checksum with the published `SHA256SUMS`. Extract the complete bundle:
+Download `taskly-1.0.17-x86_64.tar.gz` and compare its checksum with the published `SHA256SUMS`. Extract the complete bundle:
 
 ```bash
-mkdir -p taskly-1.0.16
-tar -xzf taskly-1.0.16-x86_64.tar.gz -C taskly-1.0.16
-./taskly-1.0.16/taskly
+mkdir -p taskly-1.0.17
+tar -xzf taskly-1.0.17-x86_64.tar.gz -C taskly-1.0.17
+./taskly-1.0.17/taskly
 ```
 
 Keep `taskly`, `lib/`, and `data/` together. Install GTK 3 and the Ayatana AppIndicator runtime using your distribution's package manager. Linux reminders require the app to be running; web reminders are not supported.
 
-## 1.0.16 changes
+## 1.0.17 changes
 
-Added "Backup & Export Tasks" and "Restore from Backup" in Settings. Export tasks as a portable JSON file to your device, share via native share sheet, copy to clipboard, paste from clipboard, and restore with smart task merging (tombstone deletion-safe).
+Added direct "Backup & Export Tasks" action to the main AppBar across Web, Desktop, and Android interfaces. Enhanced Web and Desktop backup flow with direct browser download management (HTML anchor blob download fallback) to ensure seamless JSON export and file picking across all browsers and desktop environments.
 
 The current Linux/Arch binaries are distributed through the downloads page. Older GitHub Releases remain historical artifacts. The Android store version depends on Google Play review and rollout.
 
@@ -85,4 +85,4 @@ Whenever a new release is prepared, version tags, binaries, and build recipes ac
 
 Güncel Linux ve Arch paketleri yukarıdaki indirme sayfasındadır. Bu depo kurulum tarifini içerir; resmî AUR kaydı değildir. Aynı Google hesabıyla Android, Linux ve web görevleri eşitlenir. Tüm cihazları güncelleyin. Linux hatırlatıcıları uygulama çalışırken kullanılır; web hatırlatıcıları desteklenmez.
 
-Sürüm 1.0.16 ile birlikte Ayarlar menüsüne "Görevleri Yedekle & İndir" ve "Yedekten Geri Yükle" özellikleri eklenmiştir. Görevleri JSON formatında dosya olarak kaydetme/paylaşma, panoya kopyalama, panodan yapıştırma ve geri yükleme sırasında akıllı birleştirme (tombstone silme korumalı) desteği sağlanmıştır.
+Sürüm 1.0.17 ile birlikte Web, Masaüstü ve Android arayüzlerinde ana ekran üst çubuğuna (AppBar) doğrudan "Görevleri Yedekle & İndir" butonu eklenmiştir. Web ve masaüstü ortamlarında tarayıcı indirme yöneticisi (blob/anchor) desteği getirilerek JSON yedek dosyalarının tüm tarayıcılarda tek dokunuşla sorunsuz inmesi ve dosya seçilerek geri yüklenebilmesi sağlanmıştır.
