@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.note.taskly"><img src="https://img.shields.io/badge/Google_Play-Taskly-green?logo=google-play&style=for-the-badge" alt="Google Play"></a>
   <a href="https://taskly-notes.web.app"><img src="https://img.shields.io/badge/Web_App-Live-orange?logo=firebase&style=for-the-badge" alt="Web App"></a>
-  <a href="https://taskly-notes.web.app/downloads.html">Download Taskly 1.0.14 — Linux / Arch</a>
+  <a href="https://taskly-notes.web.app/downloads.html">Download Taskly 1.0.15 — Linux / Arch</a>
 </p>
 
 ---
@@ -28,7 +28,7 @@
 
 ---
 
-## Taskly 1.0.14 — Linux / Arch Linux
+## Taskly 1.0.15 — Linux / Arch Linux
 
 Taskly is a Flutter to-do app with Turkish and English interfaces. Tasks sync across Android, Linux and the web when signed in with the same Google account. Offline changes merge when the app reconnects.
 
@@ -51,24 +51,24 @@ The recipe downloads the versioned Linux archive from Taskly Firebase Hosting, v
 Alternatively, download the ready-built Arch package from the downloads page and install it with:
 
 ```bash
-sudo pacman -U taskly-bin-1.0.14-1-x86_64.pkg.tar.zst
+sudo pacman -U taskly-bin-1.0.15-1-x86_64.pkg.tar.zst
 ```
 
 ## Other Linux distributions (x86_64)
 
-Download `taskly-1.0.14-x86_64.tar.gz` and compare its checksum with the published `SHA256SUMS`. Extract the complete bundle:
+Download `taskly-1.0.15-x86_64.tar.gz` and compare its checksum with the published `SHA256SUMS`. Extract the complete bundle:
 
 ```bash
-mkdir -p taskly-1.0.14
-tar -xzf taskly-1.0.14-x86_64.tar.gz -C taskly-1.0.14
-./taskly-1.0.14/taskly
+mkdir -p taskly-1.0.15
+tar -xzf taskly-1.0.15-x86_64.tar.gz -C taskly-1.0.15
+./taskly-1.0.15/taskly
 ```
 
 Keep `taskly`, `lib/`, and `data/` together. Install GTK 3 and the Ayatana AppIndicator runtime using your distribution's package manager. Linux reminders require the app to be running; web reminders are not supported.
 
-## 1.0.14 changes
+## 1.0.15 changes
 
-In-app Google Calendar monthly view integration with seamless authenticated access, holidays, and event details. Direct quick task creation for any selected calendar date. Full app header integration (profile, cloud sync, settings) with two-way task list synchronization.
+Swipe-to-Action support (Edit & Delete) for task cards on the Calendar screen: Category-themed "Edit" and red "Delete" action buttons. Instant task modification via edit bottom sheet and real-time local/cloud task synchronization upon deletion.
 
 The current Linux/Arch binaries are distributed through the downloads page. Older GitHub Releases remain historical artifacts. The Android store version depends on Google Play review and rollout.
 
@@ -85,4 +85,4 @@ Whenever a new release is prepared, version tags, binaries, and build recipes ac
 
 Güncel Linux ve Arch paketleri yukarıdaki indirme sayfasındadır. Bu depo kurulum tarifini içerir; resmî AUR kaydı değildir. Aynı Google hesabıyla Android, Linux ve web görevleri eşitlenir. Tüm cihazları güncelleyin. Linux hatırlatıcıları uygulama çalışırken kullanılır; web hatırlatıcıları desteklenmez.
 
-Sürüm 1.0.14 ile birlikte uygulama içi dahili Google Takvim aylık görünümü, takvim üzerinden doğrudan hızlı görev ekleme ve iki yönlü görev senkronizasyonu entegre edilmiştir.
+Sürüm 1.0.15 ile birlikte takvim sayfasındaki görev kartlarına sola kaydırma (Swipe Left / Slidable) desteği getirilmiştir; kategori renkli Düzenle ve kırmızı Sil butonlarıyla doğrudan takvim üzerinden görevleri düzenleme ve anlık bulut senkronizasyonuyla silme imkanı sağlanmıştır.
