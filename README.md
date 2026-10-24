@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.note.taskly"><img src="https://img.shields.io/badge/Google_Play-Taskly-green?logo=google-play&style=for-the-badge" alt="Google Play"></a>
   <a href="https://taskly-notes.web.app"><img src="https://img.shields.io/badge/Web_App-Live-orange?logo=firebase&style=for-the-badge" alt="Web App"></a>
-  <a href="https://taskly-notes.web.app/downloads.html">Download Taskly 1.0.17 — Linux / Arch</a>
+  <a href="https://taskly-notes.web.app/downloads.html">Download Taskly 1.0.18 — Linux / Arch</a>
 </p>
 
 ---
@@ -28,7 +28,7 @@
 
 ---
 
-## Taskly 1.0.17 — Linux / Arch Linux
+## Taskly 1.0.18 — Linux / Arch Linux
 
 Taskly is a Flutter to-do app with Turkish and English interfaces. Tasks sync across Android, Linux and the web when signed in with the same Google account. Offline changes merge when the app reconnects.
 
@@ -51,17 +51,17 @@ The recipe downloads the versioned Linux archive from Taskly Firebase Hosting, v
 Alternatively, download the ready-built Arch package from the downloads page and install it with:
 
 ```bash
-sudo pacman -U taskly-bin-1.0.17-1-x86_64.pkg.tar.zst
+sudo pacman -U taskly-bin-1.0.18-1-x86_64.pkg.tar.zst
 ```
 
 ## Other Linux distributions (x86_64)
 
-Download `taskly-1.0.17-x86_64.tar.gz` and compare its checksum with the published `SHA256SUMS`. Extract the complete bundle:
+Download `taskly-1.0.18-x86_64.tar.gz` and compare its checksum with the published `SHA256SUMS`. Extract the complete bundle:
 
 ```bash
-mkdir -p taskly-1.0.17
-tar -xzf taskly-1.0.17-x86_64.tar.gz -C taskly-1.0.17
-./taskly-1.0.17/taskly
+mkdir -p taskly-1.0.18
+tar -xzf taskly-1.0.18-x86_64.tar.gz -C taskly-1.0.18
+./taskly-1.0.18/taskly
 ```
 
 Keep `taskly`, `lib/`, and `data/` together. Install GTK 3 and the Ayatana AppIndicator runtime using your distribution's package manager. Linux reminders require the app to be running; web reminders are not supported.
