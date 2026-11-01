@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.note.taskly"><img src="https://img.shields.io/badge/Google_Play-Taskly-green?logo=google-play&style=for-the-badge" alt="Google Play"></a>
   <a href="https://taskly-notes.web.app"><img src="https://img.shields.io/badge/Web_App-Live-orange?logo=firebase&style=for-the-badge" alt="Web App"></a>
-  <a href="https://taskly-notes.web.app/downloads.html">Download Taskly 1.0.21 — Linux / Arch</a>
+  <a href="https://taskly-notes.web.app/downloads.html">Download Taskly 1.0.23 — Linux / Arch</a>
 </p>
 
 ---
@@ -28,9 +28,9 @@
 
 ---
 
-## Taskly 1.0.21 — Linux / Arch Linux
+## Taskly 1.0.23 — Linux / Arch Linux
 
-Taskly is a Flutter to-do app with Turkish and English interfaces. Tasks sync across Android, Linux and the web when signed in with the same Google account. Offline changes merge when the app reconnects.
+Taskly is a Flutter to-do app with 10 languages, with English as the default. Tasks sync across Android, Linux and the web when signed in with the same Google account. Offline changes merge when the app reconnects.
 
 **Current downloads:** [taskly-notes.web.app/downloads.html](https://taskly-notes.web.app/downloads.html)
 
@@ -51,28 +51,26 @@ The recipe downloads the versioned Linux archive from Taskly Firebase Hosting, v
 Alternatively, download the ready-built Arch package from the downloads page and install it with:
 
 ```bash
-sudo pacman -U taskly-bin-1.0.21-1-x86_64.pkg.tar.zst
+sudo pacman -U taskly-bin-1.0.23-1-x86_64.pkg.tar.zst
 ```
 
 ## Other Linux distributions (x86_64)
 
-Download `taskly-1.0.21-x86_64.tar.gz` and compare its checksum with the published `SHA256SUMS`. Extract the complete bundle:
+Download `taskly-1.0.23-x86_64.tar.gz` and compare its checksum with the published `SHA256SUMS`. Extract the complete bundle:
 
 ```bash
-mkdir -p taskly-1.0.21
-tar -xzf taskly-1.0.21-x86_64.tar.gz -C taskly-1.0.21
-./taskly-1.0.21/taskly
+mkdir -p taskly-1.0.23
+tar -xzf taskly-1.0.23-x86_64.tar.gz -C taskly-1.0.23
+./taskly-1.0.23/taskly
 ```
 
 Keep `taskly`, `lib/`, and `data/` together. Install GTK 3 and the Ayatana AppIndicator runtime using your distribution's package manager. Linux reminders require the app to be running; web reminders are not supported.
 
-## 1.0.21 changes
+## 1.0.23 changes
 
-- **Dahili alarm sesi** eklendi: Görev alarmları sistem sesine bağlı kalmadan uygulamanın kendi sesiyle çalar.
-- **Durdurulana kadar çal:** Alarm bildirimi siz kapatana veya susturana dek sürekli çalar (FLAG_INSISTENT).
-- **Alarmı Sustur:** Ana ekranda alarm çalarken beliren kırmızı banner'a dokunarak alarm anında susturulur.
-- **AppBar sadeleştirme:** Bulut yedekleme ve bulut indirme olmak üzere iki ayrı ikon tek bir bulut ikonuyla birleştirildi.
-- **Ayarlar uyarı banner'ı:** Sesli bildirim açıkken kesin alarm izni eksikse ayarlar ekranında tıklanabilir uyarı satırı gösterilir; dokunulduğunda doğrudan izin sayfası açılır.
+- Fixed alarms ringing again after removing an alarm or due date in the calendar.
+- Calendar edits no longer delete tasks while a search or tag filter is active.
+- Added Spanish, Portuguese, German, French, Russian, Arabic, Hindi, and Indonesian. English remains the default; Turkish is also available in Settings.
 
 The current Linux/Arch binaries are distributed through the downloads page. Older GitHub Releases remain historical artifacts. The Android store version depends on Google Play review and rollout.
 
@@ -90,4 +88,4 @@ Whenever a new release is prepared, version tags, binaries, build recipes, and t
 
 Güncel Linux ve Arch paketleri yukarıdaki indirme sayfasındadır. Bu depo kurulum tarifini içerir; resmî AUR kaydı değildir. Aynı Google hesabıyla Android, Linux ve web görevleri eşitlenir. Tüm cihazları güncelleyin. Linux hatırlatıcıları uygulama çalışırken kullanılır; web hatırlatıcıları desteklenmez.
 
-Sürüm 1.0.21 ile birlikte dahili alarm sesi, durdurulana kadar çal özelliği, alarmı susturma banner'ı ve AppBar tek bulut ikonu getirilmiştir. Sesli bildirim açıkken kesin alarm izni eksikse ayarlar ekranında tıklanabilir uyarı satırı gösterilir. Her sürüm yükseltmesinde bu README, PKGBUILD ve .SRCINFO dosyaları aynı commit'te güncellenir; hiçbir platform eski sürümde bırakılmaz.
+Sürüm 1.0.23 ile takvimden alarm/son tarih kaldırılınca alarmın tekrar çalması ve filtre açıkken takvimden düzenlemenin diğer görevleri silmesi düzeltildi. İspanyolca, Portekizce, Almanca, Fransızca, Rusça, Arapça, Hintçe ve Endonezce eklendi; varsayılan dil İngilizce olarak kalır. Her sürüm yükseltmesinde bu README, PKGBUILD ve .SRCINFO dosyaları aynı commit'te güncellenir; hiçbir platform eski sürümde bırakılmaz.
