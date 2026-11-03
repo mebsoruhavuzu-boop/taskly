@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.note.taskly"><img src="https://img.shields.io/badge/Google_Play-Taskly-green?logo=google-play&style=for-the-badge" alt="Google Play"></a>
   <a href="https://taskly-notes.web.app"><img src="https://img.shields.io/badge/Web_App-Live-orange?logo=firebase&style=for-the-badge" alt="Web App"></a>
-  <a href="https://taskly-notes.web.app/downloads.html">Download Taskly 1.0.23 — Linux / Arch</a>
+  <a href="https://taskly-notes.web.app/downloads.html">Download Taskly 1.0.24 — Linux / Arch</a>
 </p>
 
 ---
@@ -28,7 +28,7 @@
 
 ---
 
-## Taskly 1.0.23 — Linux / Arch Linux
+## Taskly 1.0.24 — Linux / Arch Linux
 
 Taskly is a Flutter to-do app with 10 languages, with English as the default. Tasks sync across Android, Linux and the web when signed in with the same Google account. Offline changes merge when the app reconnects.
 
@@ -46,31 +46,33 @@ cd taskly
 makepkg -si
 ```
 
-The recipe downloads the versioned Linux archive from Taskly Firebase Hosting, verifies its SHA-256 checksum, and installs the app in `/opt/taskly` with a launcher and desktop entry. GTK 3, libepoxy and the Ayatana AppIndicator runtime are declared as dependencies.
+The recipe downloads the versioned Linux archive from Taskly Firebase Hosting, verifies its SHA-256 checksum, and installs the app in `/opt/taskly` with a launcher and desktop entry. GTK 3, libepoxy, the Ayatana AppIndicator runtime and libsecret are declared as dependencies.
 
 Alternatively, download the ready-built Arch package from the downloads page and install it with:
 
 ```bash
-sudo pacman -U taskly-bin-1.0.23-1-x86_64.pkg.tar.zst
+sudo pacman -U taskly-bin-1.0.24-1-x86_64.pkg.tar.zst
 ```
 
 ## Other Linux distributions (x86_64)
 
-Download `taskly-1.0.23-x86_64.tar.gz` and compare its checksum with the published `SHA256SUMS`. Extract the complete bundle:
+Download `taskly-1.0.24-x86_64.tar.gz` and compare its checksum with the published `SHA256SUMS`. Extract the complete bundle:
 
 ```bash
-mkdir -p taskly-1.0.23
-tar -xzf taskly-1.0.23-x86_64.tar.gz -C taskly-1.0.23
-./taskly-1.0.23/taskly
+mkdir -p taskly-1.0.24
+tar -xzf taskly-1.0.24-x86_64.tar.gz -C taskly-1.0.24
+./taskly-1.0.24/taskly
 ```
 
-Keep `taskly`, `lib/`, and `data/` together. Install GTK 3 and the Ayatana AppIndicator runtime using your distribution's package manager. Linux reminders require the app to be running; web reminders are not supported.
+Keep `taskly`, `lib/`, and `data/` together. Install GTK 3, the Ayatana AppIndicator runtime and libsecret using your distribution's package manager. Linux reminders require the app to be running; web reminders are not supported.
 
-## 1.0.23 changes
+## 1.0.24 changes
 
-- Fixed alarms ringing again after removing an alarm or due date in the calendar.
-- Calendar edits no longer delete tasks while a search or tag filter is active.
-- Added Spanish, Portuguese, German, French, Russian, Arabic, Hindi, and Indonesian. English remains the default; Turkish is also available in Settings.
+- Recurring tasks: daily, weekly or monthly. Completing a recurring task moves its due date to the next occurrence.
+- "Snooze 10 min" action on Android reminder notifications.
+- Dynamic color (Android 12+) and a centered layout on tablets and wide screens.
+- Linux: Google sign-in tokens are now stored in the system keyring via libsecret (new dependency).
+- Faster startup; the version shown in Settings now comes from the installed package.
 
 The current Linux/Arch binaries are distributed through the downloads page. Older GitHub Releases remain historical artifacts. The Android store version depends on Google Play review and rollout.
 
@@ -88,4 +90,4 @@ Whenever a new release is prepared, version tags, binaries, build recipes, and t
 
 Güncel Linux ve Arch paketleri yukarıdaki indirme sayfasındadır. Bu depo kurulum tarifini içerir; resmî AUR kaydı değildir. Aynı Google hesabıyla Android, Linux ve web görevleri eşitlenir. Tüm cihazları güncelleyin. Linux hatırlatıcıları uygulama çalışırken kullanılır; web hatırlatıcıları desteklenmez.
 
-Sürüm 1.0.23 ile takvimden alarm/son tarih kaldırılınca alarmın tekrar çalması ve filtre açıkken takvimden düzenlemenin diğer görevleri silmesi düzeltildi. İspanyolca, Portekizce, Almanca, Fransızca, Rusça, Arapça, Hintçe ve Endonezce eklendi; varsayılan dil İngilizce olarak kalır. Her sürüm yükseltmesinde bu README, PKGBUILD ve .SRCINFO dosyaları aynı commit'te güncellenir; hiçbir platform eski sürümde bırakılmaz.
+Sürüm 1.0.24 ile tekrar eden görevler (her gün/hafta/ay), Android bildiriminden 10 dk erteleme ve Android 12+ dinamik renk eklendi; tablet düzeni ve açılış hızı iyileşti. Linux'ta Google oturum belirteçleri artık sistem anahtarlığında (libsecret) saklanır; Arch paketine `libsecret` bağımlılığı eklendi. Her sürüm yükseltmesinde bu README, PKGBUILD ve .SRCINFO dosyaları aynı commit'te güncellenir; hiçbir platform eski sürümde bırakılmaz.
