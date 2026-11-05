@@ -51,7 +51,7 @@ The recipe downloads the versioned Linux archive from Taskly Firebase Hosting, v
 Alternatively, download the ready-built Arch package from the downloads page and install it with:
 
 ```bash
-sudo pacman -U taskly-bin-1.0.24-1-x86_64.pkg.tar.zst
+sudo pacman -U taskly-bin-1.0.24-2-x86_64.pkg.tar.zst
 ```
 
 ## Other Linux distributions (x86_64)
@@ -73,6 +73,7 @@ Keep `taskly`, `lib/`, and `data/` together. Install GTK 3, the Ayatana AppIndic
 - Dynamic color (Android 12+) and a centered layout on tablets and wide screens.
 - Linux: Google sign-in tokens are now stored in the system keyring via libsecret (new dependency).
 - Faster startup; the version shown in Settings now comes from the installed package.
+- Linux package 1.0.24-2: launching Taskly again no longer starts a new copy with another tray icon; the running window comes to the front.
 
 The current Linux/Arch binaries are distributed through the downloads page. Older GitHub Releases remain historical artifacts. The Android store version depends on Google Play review and rollout.
 
@@ -90,4 +91,4 @@ Whenever a new release is prepared, version tags, binaries, build recipes, and t
 
 Güncel Linux ve Arch paketleri yukarıdaki indirme sayfasındadır. Bu depo kurulum tarifini içerir; resmî AUR kaydı değildir. Aynı Google hesabıyla Android, Linux ve web görevleri eşitlenir. Tüm cihazları güncelleyin. Linux hatırlatıcıları uygulama çalışırken kullanılır; web hatırlatıcıları desteklenmez.
 
-Sürüm 1.0.24 ile tekrar eden görevler (her gün/hafta/ay), Android bildiriminden 10 dk erteleme ve Android 12+ dinamik renk eklendi; tablet düzeni ve açılış hızı iyileşti. Linux'ta Google oturum belirteçleri artık sistem anahtarlığında (libsecret) saklanır; Arch paketine `libsecret` bağımlılığı eklendi. Her sürüm yükseltmesinde bu README, PKGBUILD ve .SRCINFO dosyaları aynı commit'te güncellenir; hiçbir platform eski sürümde bırakılmaz.
+Sürüm 1.0.24 ile tekrar eden görevler (her gün/hafta/ay), Android bildiriminden 10 dk erteleme ve Android 12+ dinamik renk eklendi; tablet düzeni ve açılış hızı iyileşti. Linux'ta Google oturum belirteçleri artık sistem anahtarlığında (libsecret) saklanır; Arch paketine `libsecret` bağımlılığı eklendi. Linux paketi 1.0.24-2 ile kısayol artık yeni kopya ve tepsi simgesi açmaz, çalışan pencereyi öne getirir. Her sürüm yükseltmesinde bu README, PKGBUILD ve .SRCINFO dosyaları aynı commit'te güncellenir; hiçbir platform eski sürümde bırakılmaz.

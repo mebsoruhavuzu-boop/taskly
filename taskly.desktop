@@ -8,5 +8,5 @@ Exec=/usr/bin/taskly
 Icon=taskly
 Terminal=false
 Categories=Utility;Office;ProjectManagement;
-StartupWMClass=taskly
+StartupWMClass=com.example.taskly
 Keywords=task;todo;gorev;taskly;
