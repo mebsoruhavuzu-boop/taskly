@@ -51,7 +51,7 @@ The recipe downloads the versioned Linux archive from Taskly Firebase Hosting, v
 Alternatively, download the ready-built Arch package from the downloads page and install it with:
 
 ```bash
-sudo pacman -U taskly-bin-1.0.25-1-x86_64.pkg.tar.zst
+sudo pacman -U taskly-bin-1.0.25-2-x86_64.pkg.tar.zst
 ```
 
 ## Ubuntu, Debian and Fedora (x86_64)
@@ -82,6 +82,7 @@ Keep `taskly`, `lib/`, and `data/` together. Requires glibc 2.38+. Install GTK 3
 - Android: remove ads with a one-time payment and restore the purchase from Settings.
 - Linux: launching Taskly again brings the running window to the front instead of opening a new copy and tray icon.
 - Recurring tasks, notification snooze, dynamic color and system keyring token storage on Linux are included.
+- Arch package 1.0.25-2: GStreamer and EGL/GLES (libglvnd) are now declared as dependencies, so Taskly also starts on minimal Arch installations.
 
 The current Linux/Arch binaries are distributed through the downloads page. Older GitHub Releases remain historical artifacts. The Android store version depends on Google Play review and rollout.
 
