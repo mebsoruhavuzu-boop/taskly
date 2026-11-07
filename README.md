@@ -54,6 +54,17 @@ Alternatively, download the ready-built Arch package from the downloads page and
 sudo pacman -U taskly-bin-1.0.25-1-x86_64.pkg.tar.zst
 ```
 
+## Ubuntu, Debian and Fedora (x86_64)
+
+Download `taskly_1.0.25-1_amd64.deb` or `taskly-1.0.25-1.x86_64.rpm` from the [downloads page](https://taskly-notes.web.app/downloads.html) or this repository's Releases, then install it with your package manager so dependencies are resolved:
+
+```bash
+sudo apt install ./taskly_1.0.25-1_amd64.deb      # Ubuntu 24.04+, Debian 13+
+sudo dnf install ./taskly-1.0.25-1.x86_64.rpm     # Fedora 39+
+```
+
+These packages require glibc 2.38 or newer. Ubuntu 22.04 and Debian 12 are not supported. They are not published in an apt/dnf repository: to update, download the new package and install it the same way.
+
 ## Other Linux distributions (x86_64)
 
 Download `taskly-1.0.25-x86_64.tar.gz` and compare its checksum with the published `SHA256SUMS`. Extract the complete bundle:
@@ -64,7 +75,7 @@ tar -xzf taskly-1.0.25-x86_64.tar.gz -C taskly-1.0.25
 ./taskly-1.0.25/taskly
 ```
 
-Keep `taskly`, `lib/`, and `data/` together. Install GTK 3, the Ayatana AppIndicator runtime and libsecret using your distribution's package manager. Linux reminders require the app to be running; web reminders are not supported.
+Keep `taskly`, `lib/`, and `data/` together. Requires glibc 2.38+. Install GTK 3, the Ayatana AppIndicator runtime, libsecret and GStreamer using your distribution's package manager. Linux reminders require the app to be running; web reminders are not supported.
 
 ## 1.0.25 changes
 
@@ -86,6 +97,6 @@ Whenever a new release is prepared, version tags, binaries, build recipes, and t
 
 ## Türkçe kısa bilgi
 
-Güncel Linux ve Arch paketleri yukarıdaki indirme sayfasındadır. Bu depo kurulum tarifini içerir; resmî AUR kaydı değildir. Aynı Google hesabıyla Android, Linux ve web görevleri eşitlenir. Tüm cihazları güncelleyin. Linux hatırlatıcıları uygulama çalışırken kullanılır; web hatırlatıcıları desteklenmez.
+Güncel Linux, Arch, Ubuntu/Debian (.deb) ve Fedora (.rpm) paketleri yukarıdaki indirme sayfasındadır; DEB ve RPM paketleri Ubuntu 24.04+, Debian 13+ ve Fedora 39+ gerektirir. Bu depo kurulum tarifini içerir; resmî AUR kaydı değildir. Aynı Google hesabıyla Android, Linux ve web görevleri eşitlenir. Tüm cihazları güncelleyin. Linux hatırlatıcıları uygulama çalışırken kullanılır; web hatırlatıcıları desteklenmez.
 
 Sürüm 1.0.25 ile Android'de Ayarlar'dan tek seferlik ödemeyle reklamları kaldırma ve satın almayı geri yükleme eklendi. Linux'ta kısayol yeni kopya ve tepsi simgesi açmaz, çalışan pencereyi öne getirir. Tekrar eden görevler, bildirimden erteleme ve dinamik renk bu sürümde de devam eder. Her sürüm yükseltmesinde bu README, PKGBUILD ve .SRCINFO dosyaları aynı commit'te güncellenir; hiçbir platform eski sürümde bırakılmaz.
