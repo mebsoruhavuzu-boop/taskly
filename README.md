@@ -90,7 +90,7 @@ The current Linux/Arch binaries are distributed through the downloads page. Olde
 
 Taskly updates are strictly synchronized across all distribution channels:
 1. **Google Play Store:** Official Android app releases (AAB/APK) and release notes (TR & EN, ≤500 chars).
-2. **Arch Linux:** Built packages (`taskly-bin`), `PKGBUILD`, `.SRCINFO`, and download archives on Firebase Hosting.
+2. **Linux (Arch, Ubuntu/Debian, Fedora):** Arch package (`taskly-bin`), DEB and RPM packages built from the same release archive, `PKGBUILD`, `.SRCINFO`, and download archives on Firebase Hosting and GitHub Releases.
 3. **GitHub Repository:** `PKGBUILD`, `.SRCINFO`, **`README.md`** (this file — version number, package names, changelog section, and Turkish description must all be updated in the same commit as PKGBUILD/.SRCINFO).
 4. **Web Guide & Privacy Policy:** `https://taskly-notes.web.app/guide_taskly.html` and `privacy_taskly.html` — deployed to Firebase Hosting.
 
