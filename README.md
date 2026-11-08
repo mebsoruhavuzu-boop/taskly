@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.note.taskly"><img src="https://img.shields.io/badge/Google_Play-Taskly-green?logo=google-play&style=for-the-badge" alt="Google Play"></a>
   <a href="https://taskly-notes.web.app"><img src="https://img.shields.io/badge/Web_App-Live-orange?logo=firebase&style=for-the-badge" alt="Web App"></a>
-  <a href="https://taskly-notes.web.app/downloads.html">Download Taskly 1.0.26 — Linux / Arch</a>
+  <a href="https://taskly-notes.web.app/downloads.html">Download Taskly 1.0.27 — Linux / Arch</a>
 </p>
 
 ---
@@ -28,7 +28,7 @@
 
 ---
 
-## Taskly 1.0.26 — Linux / Arch Linux
+## Taskly 1.0.27 — Linux / Arch Linux
 
 Taskly is a Flutter to-do app with 10 languages, with English as the default. Tasks sync across Android, Linux and the web when signed in with the same Google account. Offline changes merge when the app reconnects.
 
@@ -51,37 +51,39 @@ The recipe downloads the versioned Linux archive from Taskly Firebase Hosting, v
 Alternatively, download the ready-built Arch package from the downloads page and install it with:
 
 ```bash
-sudo pacman -U taskly-bin-1.0.26-1-x86_64.pkg.tar.zst
+sudo pacman -U taskly-bin-1.0.27-1-x86_64.pkg.tar.zst
 ```
 
 ## Ubuntu, Debian and Fedora (x86_64)
 
-Download `taskly_1.0.26-1_amd64.deb` or `taskly-1.0.26-1.x86_64.rpm` from the [downloads page](https://taskly-notes.web.app/downloads.html) or this repository's Releases, then install it with your package manager so dependencies are resolved:
+Download `taskly_1.0.27-1_amd64.deb` or `taskly-1.0.27-1.x86_64.rpm` from the [downloads page](https://taskly-notes.web.app/downloads.html) or this repository's Releases, then install it with your package manager so dependencies are resolved:
 
 ```bash
-sudo apt install ./taskly_1.0.26-1_amd64.deb      # Ubuntu 24.04+, Debian 13+
-sudo dnf install ./taskly-1.0.26-1.x86_64.rpm     # Fedora 39+
+sudo apt install ./taskly_1.0.27-1_amd64.deb      # Ubuntu 24.04+, Debian 13+
+sudo dnf install ./taskly-1.0.27-1.x86_64.rpm     # Fedora 39+
 ```
 
 These packages require glibc 2.38 or newer. Ubuntu 22.04 and Debian 12 are not supported. They are not published in an apt/dnf repository: to update, download the new package and install it the same way.
 
 ## Other Linux distributions (x86_64)
 
-Download `taskly-1.0.26-x86_64.tar.gz` and compare its checksum with the published `SHA256SUMS`. Extract the complete bundle:
+Download `taskly-1.0.27-x86_64.tar.gz` and compare its checksum with the published `SHA256SUMS`. Extract the complete bundle:
 
 ```bash
-mkdir -p taskly-1.0.26
-tar -xzf taskly-1.0.26-x86_64.tar.gz -C taskly-1.0.26
-./taskly-1.0.26/taskly
+mkdir -p taskly-1.0.27
+tar -xzf taskly-1.0.27-x86_64.tar.gz -C taskly-1.0.27
+./taskly-1.0.27/taskly
 ```
 
 Keep `taskly`, `lib/`, and `data/` together. Requires glibc 2.38+. Install GTK 3, the Ayatana AppIndicator runtime, libsecret and GStreamer using your distribution's package manager. Linux reminders require the app to be running; web reminders are not supported.
 
-## 1.0.26 changes
+## 1.0.27 changes
 
-- Android: a formatting bar appears right above the keyboard while writing a task — bold, italic, strikethrough, bulleted and numbered lists. Tap Bold and your text starts bold; Enter continues the list.
-- Formatted tasks are shown with their formatting (without markup) in the Linux and web task lists, notifications use plain text.
-- Remove-ads purchase on Android and single-window launch on Linux are included.
+- Restoring a backup also removes deleted tasks from the cloud and keeps changes made after the restore.
+- Formatting characters (`*`, `_`, `~`) are kept in plain task text; inline formatting survives multi-line bulleted and numbered lists.
+- Snoozed alarms use the current sound and "ring until stopped" setting.
+- Overlong task, category, subtask and tag fields are flagged before saving or importing.
+- The Android formatting bar above the keyboard (bold, italic, strikethrough, lists) is included.
 
 The current Linux/Arch binaries are distributed through the downloads page. Older GitHub Releases remain historical artifacts. The Android store version depends on Google Play review and rollout.
 
@@ -99,4 +101,4 @@ Whenever a new release is prepared, version tags, binaries, build recipes, and t
 
 Güncel Linux, Arch, Ubuntu/Debian (.deb) ve Fedora (.rpm) paketleri yukarıdaki indirme sayfasındadır; DEB ve RPM paketleri Ubuntu 24.04+, Debian 13+ ve Fedora 39+ gerektirir. Bu depo kurulum tarifini içerir; resmî AUR kaydı değildir. Aynı Google hesabıyla Android, Linux ve web görevleri eşitlenir. Tüm cihazları güncelleyin. Linux hatırlatıcıları uygulama çalışırken kullanılır; web hatırlatıcıları desteklenmez.
 
-Sürüm 1.0.26 ile Android'de görev yazarken klavyenin üstünde biçim çubuğu (kalın, italik, üstü çizili, madde ve numaralı liste) eklendi; biçimli görevler Linux ve web listelerinde de biçimli görünür. Reklamları kaldırma satın alımı ve Linux tek pencere davranışı devam eder. Her sürüm yükseltmesinde bu README, PKGBUILD ve .SRCINFO dosyaları aynı commit'te güncellenir; hiçbir platform eski sürümde bırakılmaz.
+Sürüm 1.0.27 ile yedekten geri yükleme, düz metindeki biçim işaretleri, ertelenen alarm sesi ve görev alanı uzunluk denetimi düzeltildi; Android'deki klavye üstü biçim çubuğu (kalın, italik, üstü çizili, madde ve numaralı liste) bu sürümde de bulunur.
