@@ -1,6 +1,6 @@
 pkgbase = taskly-bin
 	pkgdesc = Flutter tabanlı, Android ve Linux arasında Google hesaplı çift yönlü görev senkronizasyonu sağlayan yapılacaklar listesi uygulaması
-	pkgver = 1.0.28
+	pkgver = 1.0.29
 	pkgrel = 1
 	url = https://github.com/mebsoruhavuzu-boop/taskly
 	arch = x86_64
@@ -19,10 +19,10 @@ pkgbase = taskly-bin
 	conflicts = taskly
 	options = !strip
 	options = !debug
-	source = taskly-1.0.28-x86_64.tar.gz::https://taskly-notes.web.app/downloads/taskly-1.0.28-x86_64.tar.gz
+	source = taskly-1.0.29-x86_64.tar.gz::https://taskly-notes.web.app/downloads/taskly-1.0.29-x86_64.tar.gz
 	source = taskly.desktop
 	source = taskly.png
-	sha256sums = 9a6fb3299452c340ff5953d8647fa2d2cdd18603be995c134f29458668b26596
+	sha256sums = 6f1eaa0275c39e0740ac1d50d01471b5b2393d7b1da6110091125b8cb82001e9
 	sha256sums = 2ead1fbc4eae60014b82ebbf725eb8c38ab4c034df408f2f6be5911fa36ce13e
 	sha256sums = a83767f8fdabc7a4fe028d6076473762ef88fd61f7c9064803b3b530137b94cf
 
