@@ -1,7 +1,7 @@
 # Maintainer: Ismail Aslan <ismailaslan7879@gmail.com>
 pkgname=taskly-bin
-pkgver=1.0.27
-pkgrel=2
+pkgver=1.0.28
+pkgrel=1
 pkgdesc="Flutter tabanlı, Android ve Linux arasında Google hesaplı çift yönlü görev senkronizasyonu sağlayan yapılacaklar listesi uygulaması"
 arch=('x86_64')
 url="https://github.com/mebsoruhavuzu-boop/taskly"
@@ -19,7 +19,7 @@ source=(
 )
 
 sha256sums=(
-  '8815aa35024097d935a516ca76cfb2aa29680fab47dc681b782d21ec938a5c9d'
+  '9a6fb3299452c340ff5953d8647fa2d2cdd18603be995c134f29458668b26596'
   '2ead1fbc4eae60014b82ebbf725eb8c38ab4c034df408f2f6be5911fa36ce13e'
   'a83767f8fdabc7a4fe028d6076473762ef88fd61f7c9064803b3b530137b94cf'
 )
