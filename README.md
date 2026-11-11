@@ -51,16 +51,16 @@ The recipe downloads the versioned Linux archive from Taskly Firebase Hosting, v
 Alternatively, download the ready-built Arch package from the downloads page and install it with:
 
 ```bash
-sudo pacman -U taskly-bin-1.0.30-1-x86_64.pkg.tar.zst
+sudo pacman -U taskly-bin-1.0.30-2-x86_64.pkg.tar.zst
 ```
 
 ## Ubuntu, Debian and Fedora (x86_64)
 
-Download `taskly_1.0.30-1_amd64.deb` or `taskly-1.0.30-1.x86_64.rpm` from the [downloads page](https://taskly-notes.web.app/downloads.html) or this repository's Releases, then install it with your package manager so dependencies are resolved:
+Download `taskly_1.0.30-2_amd64.deb` or `taskly-1.0.30-2.x86_64.rpm` from the [downloads page](https://taskly-notes.web.app/downloads.html) or this repository's Releases, then install it with your package manager so dependencies are resolved:
 
 ```bash
-sudo apt install ./taskly_1.0.30-1_amd64.deb      # Ubuntu 24.04+, Debian 13+
-sudo dnf install ./taskly-1.0.30-1.x86_64.rpm     # Fedora 39+
+sudo apt install ./taskly_1.0.30-2_amd64.deb      # Ubuntu 24.04+, Debian 13+
+sudo dnf install ./taskly-1.0.30-2.x86_64.rpm     # Fedora 39+
 ```
 
 These packages require glibc 2.38 or newer. Ubuntu 22.04 and Debian 12 are not supported. They are not published in an apt/dnf repository: to update, download the new package and install it the same way.
@@ -79,6 +79,7 @@ Keep `taskly`, `lib/`, and `data/` together. Requires glibc 2.38+. Install GTK 3
 
 ## 1.0.30 changes
 
+- 1.0.30-2: the account (Google sign-in) icon moved to the far right of the top bar on the home and calendar screens.
 - Android: on the calendar screen the "Add task for this date" button no longer sits under the system navigation bar (seen on Galaxy S25), and the floating add button no longer covers the day header, the empty-day text or the last task's checkbox. Task lists get bottom spacing below the floating button; the month header no longer overflows on narrow screens or large fonts. Linux and web share the same layout.
 - From 1.0.29: Android background sync no longer re-schedules old alarms for tasks that were deleted or removed during a backup restore; it applies the same merge rules as the app (single cloud read, deletion fence, pending restore cutoff).
 - Linux: new "Start at login" switch in Settings → Notifications & Sound. Taskly then starts in the tray without a window when you log in (`~/.config/autostart/taskly.desktop`, `--hidden`), so reminders keep working.
