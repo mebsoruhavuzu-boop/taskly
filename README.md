@@ -87,7 +87,7 @@ Keep `taskly`, `lib/`, and `data/` together. Requires glibc 2.38+. Install GTK 3
 - Android: alarms added on Linux or the web are synced in the background about every 15 minutes and set even while the app is closed.
 - The formatting bar (bold, italic, strikethrough, lists) with Ctrl+B, Ctrl+I and Ctrl+Shift+X shortcuts is included.
 
-The current Linux/Arch binaries are distributed through the downloads page. Older GitHub Releases remain historical artifacts. The Android store version depends on Google Play review and rollout.
+The current Linux/Arch binaries are distributed through the downloads page. Only the current and the previous GitHub Release are kept; older releases are removed. The Android store version depends on Google Play review and rollout.
 
 ## Platform Synchronization Policy / Platform Senkronizasyon Kuralı
 
