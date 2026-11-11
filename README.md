@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.note.taskly"><img src="https://img.shields.io/badge/Google_Play-Taskly-green?logo=google-play&style=for-the-badge" alt="Google Play"></a>
   <a href="https://taskly-notes.web.app"><img src="https://img.shields.io/badge/Web_App-Live-orange?logo=firebase&style=for-the-badge" alt="Web App"></a>
-  <a href="https://taskly-notes.web.app/downloads.html">Download Taskly 1.0.29 — Linux / Arch</a>
+  <a href="https://taskly-notes.web.app/downloads.html">Download Taskly 1.0.30 — Linux / Arch</a>
 </p>
 
 ---
@@ -28,7 +28,7 @@
 
 ---
 
-## Taskly 1.0.29 — Linux / Arch Linux
+## Taskly 1.0.30 — Linux / Arch Linux
 
 Taskly is a Flutter to-do app with 10 languages, with English as the default. Tasks sync across Android, Linux and the web when signed in with the same Google account. Offline changes merge when the app reconnects.
 
@@ -51,35 +51,36 @@ The recipe downloads the versioned Linux archive from Taskly Firebase Hosting, v
 Alternatively, download the ready-built Arch package from the downloads page and install it with:
 
 ```bash
-sudo pacman -U taskly-bin-1.0.29-1-x86_64.pkg.tar.zst
+sudo pacman -U taskly-bin-1.0.30-1-x86_64.pkg.tar.zst
 ```
 
 ## Ubuntu, Debian and Fedora (x86_64)
 
-Download `taskly_1.0.29-1_amd64.deb` or `taskly-1.0.29-1.x86_64.rpm` from the [downloads page](https://taskly-notes.web.app/downloads.html) or this repository's Releases, then install it with your package manager so dependencies are resolved:
+Download `taskly_1.0.30-1_amd64.deb` or `taskly-1.0.30-1.x86_64.rpm` from the [downloads page](https://taskly-notes.web.app/downloads.html) or this repository's Releases, then install it with your package manager so dependencies are resolved:
 
 ```bash
-sudo apt install ./taskly_1.0.29-1_amd64.deb      # Ubuntu 24.04+, Debian 13+
-sudo dnf install ./taskly-1.0.29-1.x86_64.rpm     # Fedora 39+
+sudo apt install ./taskly_1.0.30-1_amd64.deb      # Ubuntu 24.04+, Debian 13+
+sudo dnf install ./taskly-1.0.30-1.x86_64.rpm     # Fedora 39+
 ```
 
 These packages require glibc 2.38 or newer. Ubuntu 22.04 and Debian 12 are not supported. They are not published in an apt/dnf repository: to update, download the new package and install it the same way.
 
 ## Other Linux distributions (x86_64)
 
-Download `taskly-1.0.29-x86_64.tar.gz` and compare its checksum with the published `SHA256SUMS`. Extract the complete bundle:
+Download `taskly-1.0.30-x86_64.tar.gz` and compare its checksum with the published `SHA256SUMS`. Extract the complete bundle:
 
 ```bash
-mkdir -p taskly-1.0.29
-tar -xzf taskly-1.0.29-x86_64.tar.gz -C taskly-1.0.29
-./taskly-1.0.29/taskly
+mkdir -p taskly-1.0.30
+tar -xzf taskly-1.0.30-x86_64.tar.gz -C taskly-1.0.30
+./taskly-1.0.30/taskly
 ```
 
 Keep `taskly`, `lib/`, and `data/` together. Requires glibc 2.38+. Install GTK 3, the Ayatana AppIndicator runtime, libsecret and GStreamer using your distribution's package manager. Linux reminders require the app to be running; web reminders are not supported.
 
-## 1.0.29 changes
+## 1.0.30 changes
 
-- Android background sync no longer re-schedules old alarms for tasks that were deleted or removed during a backup restore; it applies the same merge rules as the app (single cloud read, deletion fence, pending restore cutoff).
+- Android: on the calendar screen the "Add task for this date" button no longer sits under the system navigation bar (seen on Galaxy S25), and the floating add button no longer covers the day header, the empty-day text or the last task's checkbox. Task lists get bottom spacing below the floating button; the month header no longer overflows on narrow screens or large fonts. Linux and web share the same layout.
+- From 1.0.29: Android background sync no longer re-schedules old alarms for tasks that were deleted or removed during a backup restore; it applies the same merge rules as the app (single cloud read, deletion fence, pending restore cutoff).
 - Linux: new "Start at login" switch in Settings → Notifications & Sound. Taskly then starts in the tray without a window when you log in (`~/.config/autostart/taskly.desktop`, `--hidden`), so reminders keep working.
 - Linux: reminders whose time passed while Taskly was not running are listed in a single "missed reminders" notification.
 - Android: alarms added on Linux or the web are synced in the background about every 15 minutes and set even while the app is closed.
@@ -101,4 +102,4 @@ Whenever a new release is prepared, version tags, binaries, build recipes, and t
 
 Güncel Linux, Arch, Ubuntu/Debian (.deb) ve Fedora (.rpm) paketleri yukarıdaki indirme sayfasındadır; DEB ve RPM paketleri Ubuntu 24.04+, Debian 13+ ve Fedora 39+ gerektirir. Bu depo kurulum tarifini içerir; resmî AUR kaydı değildir. Aynı Google hesabıyla Android, Linux ve web görevleri eşitlenir. Tüm cihazları güncelleyin. Linux hatırlatıcıları uygulama çalışırken kullanılır; web hatırlatıcıları desteklenmez.
 
-Sürüm 1.0.29 ile Android arka plan eşitlemesi silinen veya yedekten geri yüklemede kaldırılan görevlerin eski alarmlarını kurmaz. 1.0.28'den gelen Linux "Oturum açılınca başlat" anahtarı, kaçırılan hatırlatıcı bildirimi ve Android'de arka planda alarm eşitlemesi sürer.
+Sürüm 1.0.30 ile takvim ekranındaki "Bu tarihe görev ekle" düğmesinin ve görev listelerinin sistem gezinme çubuğu ve yüzen ekleme düğmesiyle çakışması giderildi. 1.0.29'dan gelen: Android arka plan eşitlemesi silinen veya yedekten geri yüklemede kaldırılan görevlerin eski alarmlarını kurmaz. 1.0.28'den gelen Linux "Oturum açılınca başlat" anahtarı, kaçırılan hatırlatıcı bildirimi ve Android'de arka planda alarm eşitlemesi sürer.
