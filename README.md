@@ -51,16 +51,16 @@ The recipe downloads the versioned Linux archive from Taskly Firebase Hosting, v
 Alternatively, download the ready-built Arch package from the downloads page and install it with:
 
 ```bash
-sudo pacman -U taskly-bin-1.0.35-1-x86_64.pkg.tar.zst
+sudo pacman -U taskly-bin-1.0.35-2-x86_64.pkg.tar.zst
 ```
 
 ## Ubuntu, Debian and Fedora (x86_64)
 
-Download `taskly_1.0.35-1_amd64.deb` or `taskly-1.0.35-1.x86_64.rpm` from the [downloads page](https://taskly-notes.web.app/downloads.html) or this repository's Releases, then install it with your package manager so dependencies are resolved:
+Download `taskly_1.0.35-2_amd64.deb` or `taskly-1.0.35-2.x86_64.rpm` from the [downloads page](https://taskly-notes.web.app/downloads.html) or this repository's Releases, then install it with your package manager so dependencies are resolved:
 
 ```bash
-sudo apt install ./taskly_1.0.35-1_amd64.deb      # Ubuntu 24.04+, Debian 13+
-sudo dnf install ./taskly-1.0.35-1.x86_64.rpm     # Fedora 39+
+sudo apt install ./taskly_1.0.35-2_amd64.deb      # Ubuntu 24.04+, Debian 13+
+sudo dnf install ./taskly-1.0.35-2.x86_64.rpm     # Fedora 39+
 ```
 
 These packages require glibc 2.38 or newer. Ubuntu 22.04 and Debian 12 are not supported. They are not published in an apt/dnf repository: to update, download the new package and install it the same way.
@@ -79,6 +79,7 @@ Keep `taskly`, `lib/`, and `data/` together. Requires glibc 2.38+. Install GTK 3
 
 ## 1.0.35 changes
 
+- **Linux 1.0.35-2:** Fixes a black window on Wayland with Mesa 26.3+ by falling back to X11/XWayland automatically when GTK 3 cannot acquire a Wayland EGL configuration (explicit `GDK_BACKEND` overrides are still respected).
 - Add and edit task screens: the text area now fills all free space, and the category, priority, due date and tag rows sit right above the Save button. With the keyboard open the text area shrinks and the rest scrolls.
 
 ### Included from 1.0.34
@@ -107,4 +108,4 @@ Whenever a new release is prepared, version tags, binaries, build recipes, and t
 
 Güncel Linux, Arch, Ubuntu/Debian (.deb) ve Fedora (.rpm) paketleri yukarıdaki indirme sayfasındadır; DEB ve RPM paketleri Ubuntu 24.04+, Debian 13+ ve Fedora 39+ gerektirir. Bu depo kurulum tarifini içerir; resmî AUR kaydı değildir. Aynı Google hesabıyla Android, Linux ve web görevleri eşitlenir. Tüm cihazları güncelleyin. Linux hatırlatıcıları uygulama çalışırken kullanılır; web hatırlatıcıları desteklenmez.
 
-Sürüm 1.0.35 ile görev ekleme/düzenleme ekranında yazı alanı tüm boş alanı kaplar; kategori, öncelik, tarih ve etiket satırları Kaydet düğmesinin hemen üstündedir. 1.0.34 ile gelen kategori yönetimiyle kategoriler kullanıcı tarafından yönetilir: "Tümü" dışındaki her kategori yeniden adlandırılabilir veya silinebilir, yeni kategori ve tek seviye alt kategori oluşturulabilir, görevler kategoriler arasında taşınabilir. Silmede görevler için seçim sunulur ve "Geri al" her şeyi geri getirir; "Tümü" görevleri klasör ağacı şeklinde gösterir. Kategoriler bulut eşitlemesine ve yedeğe dahildir; eşitleme güvenilirliği artırıldı. Özel kategoriler 1.0.31 ve öncesinde tanınmaz; tüm cihazları 1.0.35'e güncelleyin.
+Sürüm 1.0.35 ile görev ekleme/düzenleme ekranında yazı alanı tüm boş alanı kaplar; kategori, öncelik, tarih ve etiket satırları Kaydet düğmesinin hemen üstündedir. Linux 1.0.35-2 paketi, Mesa 26.3+ ile Wayland oturumlarında GTK 3 OpenGL bağlamı kurulamadığında oluşan siyah ekran sorununu giderir. 1.0.34 ile gelen kategori yönetimiyle kategoriler kullanıcı tarafından yönetilir: "Tümü" dışındaki her kategori yeniden adlandırılabilir veya silinebilir, yeni kategori ve tek seviye alt kategori oluşturulabilir, görevler kategoriler arasında taşınabilir. Silmede görevler için seçim sunulur ve "Geri al" her şeyi geri getirir; "Tümü" görevleri klasör ağacı şeklinde gösterir. Kategoriler bulut eşitlemesine ve yedeğe dahildir; eşitleme güvenilirliği artırıldı. Özel kategoriler 1.0.31 ve öncesinde tanınmaz; tüm cihazları 1.0.35'e güncelleyin.
