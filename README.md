@@ -80,7 +80,7 @@ Keep `taskly`, `lib/`, and `data/` together. Requires glibc 2.38+. Install GTK 3
 ## 1.0.36 changes
 
 - Android task text selection menus no longer show Share or system text-processing actions such as Read aloud. Cut, Copy, Paste and Select all remain available.
-- The task editing guide documents the selection actions. Linux keeps the same keyboard shortcuts and clipboard controls.
+- Linux task text selection menus no longer show Share. Keyboard shortcuts and clipboard controls remain available.
 
 ### Included from 1.0.35
 
