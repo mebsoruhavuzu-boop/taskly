@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.note.taskly"><img src="https://img.shields.io/badge/Google_Play-Taskly-green?logo=google-play&style=for-the-badge" alt="Google Play"></a>
   <a href="https://taskly-notes.web.app"><img src="https://img.shields.io/badge/Web_App-Live-orange?logo=firebase&style=for-the-badge" alt="Web App"></a>
-  <a href="https://taskly-notes.web.app/downloads.html">Download Taskly 1.0.38 — Linux / Arch</a>
+  <a href="https://taskly-notes.web.app/downloads.html">Download Taskly 1.0.39 — Linux / Arch</a>
 </p>
 
 ---
@@ -28,7 +28,7 @@
 
 ---
 
-## Taskly 1.0.38 — Linux / Arch Linux
+## Taskly 1.0.39 — Linux / Arch Linux
 
 Taskly is a Flutter to-do app with 10 languages, with English as the default. Tasks sync across Android, Linux and the web when signed in with the same Google account. Offline changes merge when the app reconnects.
 
@@ -51,31 +51,36 @@ The recipe downloads the versioned Linux archive from Taskly Firebase Hosting, v
 Alternatively, download the ready-built Arch package from the downloads page and install it with:
 
 ```bash
-sudo pacman -U taskly-bin-1.0.38-1-x86_64.pkg.tar.zst
+sudo pacman -U taskly-bin-1.0.39-1-x86_64.pkg.tar.zst
 ```
 
 ## Ubuntu, Debian and Fedora (x86_64)
 
-Download `taskly_1.0.38-1_amd64.deb` or `taskly-1.0.38-1.x86_64.rpm` from the [downloads page](https://taskly-notes.web.app/downloads.html) or this repository's Releases, then install it with your package manager so dependencies are resolved:
+Download `taskly_1.0.39-1_amd64.deb` or `taskly-1.0.39-1.x86_64.rpm` from the [downloads page](https://taskly-notes.web.app/downloads.html) or this repository's Releases, then install it with your package manager so dependencies are resolved:
 
 ```bash
-sudo apt install ./taskly_1.0.38-1_amd64.deb      # Ubuntu 24.04+, Debian 13+
-sudo dnf install ./taskly-1.0.38-1.x86_64.rpm     # Fedora 39+
+sudo apt install ./taskly_1.0.39-1_amd64.deb      # Ubuntu 24.04+, Debian 13+
+sudo dnf install ./taskly-1.0.39-1.x86_64.rpm     # Fedora 39+
 ```
 
 These packages require glibc 2.38 or newer. Ubuntu 22.04 and Debian 12 are not supported. They are not published in an apt/dnf repository: to update, download the new package and install it the same way.
 
 ## Other Linux distributions (x86_64)
 
-Download `taskly-1.0.38-x86_64.tar.gz` and compare its checksum with the published `SHA256SUMS`. Extract the complete bundle:
+Download `taskly-1.0.39-x86_64.tar.gz` and compare its checksum with the published `SHA256SUMS`. Extract the complete bundle:
 
 ```bash
-mkdir -p taskly-1.0.38
-tar -xzf taskly-1.0.38-x86_64.tar.gz -C taskly-1.0.38
-./taskly-1.0.38/taskly
+mkdir -p taskly-1.0.39
+tar -xzf taskly-1.0.39-x86_64.tar.gz -C taskly-1.0.39
+./taskly-1.0.39/taskly
 ```
 
 Keep `taskly`, `lib/`, and `data/` together. Requires glibc 2.38+. Install GTK 3, the Ayatana AppIndicator runtime, libsecret and GStreamer using your distribution's package manager. Linux reminders require the app to be running; web reminders are not supported.
+
+## 1.0.39 changes
+
+- Android: upgraded bottom ad bars to Anchored Adaptive Banners, improved inline native ad placement in long task lists, added smart load delays on secondary screens, and published `app-ads.txt` alongside dedicated GDPR support.
+- Linux 1.0.39-1 maintains full parity with all 1.0.38 features, Wayland/EGL fixes, and cloud sync.
 
 ## 1.0.38 changes
 
@@ -110,7 +115,7 @@ Keep `taskly`, `lib/`, and `data/` together. Requires glibc 2.38+. Install GTK 3
 - Category options (long-press, the ⋮ button, or a header in the "All" tree) include "Add a task" and "New subcategory".
 - Categories are included in cloud sync and JSON backups.
 - Reliability: changes sync correctly even if the device clock is set back, broken or circular category links are repaired, a failing category merge no longer stops task sync, and category errors are reported to the user.
-- Compatibility: version 1.0.31 and earlier do not recognise custom categories. Update all devices to 1.0.38.
+- Compatibility: version 1.0.31 and earlier do not recognise custom categories. Update all devices to 1.0.39.
 
 The current Linux/Arch binaries are distributed through the downloads page. Only the current and the previous GitHub Release are kept; older releases are removed. The Android store version depends on Google Play review and rollout.
 
@@ -128,4 +133,4 @@ Whenever a new release is prepared, version tags, binaries, build recipes, and t
 
 Güncel Linux, Arch, Ubuntu/Debian (.deb) ve Fedora (.rpm) paketleri yukarıdaki indirme sayfasındadır; DEB ve RPM paketleri Ubuntu 24.04+, Debian 13+ ve Fedora 39+ gerektirir. Bu depo kurulum tarifini içerir; resmî AUR kaydı değildir. Aynı Google hesabıyla Android, Linux ve web görevleri eşitlenir. Tüm cihazları güncelleyin. Linux hatırlatıcıları uygulama çalışırken kullanılır; web hatırlatıcıları desteklenmez.
 
-Sürüm 1.0.38 ile arama ve sıralama üst çubuğa taşındı, koyu mod arama yazısı düzeltildi, Bugün ve Geciken hızlı filtreleri, göreve dokunarak düzenleme, alt görev kontrol listeleri (ilerleme rozetiyle) ve Tümü sekmesinde toplu seçim eklendi. Android’de uyarlanabilir alt banner (Takvim dahil) ve koyu/açık tema uyumlu satır içi yerel reklamlar eklendi; Linux ve web sürümleri reklamsızdır. Sürüm 1.0.37 ile Android ve Linux görev metni araç çubuğunda Kes, Kopyala ve Yapıştır ayrı düğmeler oldu. Özel kategoriler 1.0.31 ve öncesinde tanınmaz; tüm cihazları 1.0.38'e güncelleyin.
+Sürüm 1.0.39 ile Android’de tam genişlikli Anchored Adaptive Banner, uzun listelerde akıllı yerel reklam yerleşimi ve `app-ads.txt`/GDPR iyileştirmeleri sunuldu; Linux ve web sürümleri reklamsızdır. Sürüm 1.0.38 ile arama ve sıralama üst çubuğa taşındı, koyu mod arama yazısı düzeltildi, Bugün ve Geciken hızlı filtreleri, göreve dokunarak düzenleme, alt görev kontrol listeleri (ilerleme rozetiyle) ve Tümü sekmesinde toplu seçim eklendi. Özel kategoriler 1.0.31 ve öncesinde tanınmaz; tüm cihazları 1.0.39'a güncelleyin.
