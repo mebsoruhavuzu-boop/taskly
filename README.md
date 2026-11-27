@@ -5,13 +5,14 @@
 </p>
 
 <p align="center">
-  <strong>Taskly</strong> is a sleek, responsive, and minimalist to-do list application crafted with Flutter, featuring real-time bidirectional cloud synchronization between <strong>Android</strong>, <strong>Linux Desktop</strong>, and the <strong>Web</strong>.
+  <strong>Taskly</strong> is a sleek, responsive, and minimalist to-do list application crafted with Flutter, featuring real-time bidirectional cloud synchronization between <strong>Android</strong>, <strong>Linux Desktop</strong>, <strong>Windows Desktop</strong>, and the <strong>Web</strong>.
 </p>
 
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.note.taskly"><img src="https://img.shields.io/badge/Google_Play-Taskly-green?logo=google-play&style=for-the-badge" alt="Google Play"></a>
   <a href="https://taskly-notes.web.app"><img src="https://img.shields.io/badge/Web_App-Live-orange?logo=firebase&style=for-the-badge" alt="Web App"></a>
-  <a href="https://taskly-notes.web.app/downloads.html">Download Taskly 1.0.39 — Linux / Arch</a>
+  <a href="https://github.com/mebsoruhavuzu-boop/taskly/releases/tag/v1.0.39"><img src="https://img.shields.io/badge/Windows_&_Linux-v1.0.39-blue?logo=github&style=for-the-badge" alt="Download v1.0.39"></a>
+  <a href="https://taskly-notes.web.app/downloads.html">Download Taskly 1.0.39 — Linux / Arch / Windows</a>
 </p>
 
 ---
@@ -28,9 +29,9 @@
 
 ---
 
-## Taskly 1.0.39 — Linux / Arch Linux
+## Taskly 1.0.39 — Linux, Windows & Arch Linux
 
-Taskly is a Flutter to-do app with 10 languages, with English as the default. Tasks sync across Android, Linux and the web when signed in with the same Google account. Offline changes merge when the app reconnects.
+Taskly is a Flutter to-do app with 10 languages, with English as the default. Tasks sync across Android, Linux, Windows and the web when signed in with the same Google account. Offline changes merge when the app reconnects.
 
 **Current downloads:** [taskly-notes.web.app/downloads.html](https://taskly-notes.web.app/downloads.html)
 
@@ -77,10 +78,25 @@ tar -xzf taskly-1.0.39-x86_64.tar.gz -C taskly-1.0.39
 
 Keep `taskly`, `lib/`, and `data/` together. Requires glibc 2.38+. Install GTK 3, the Ayatana AppIndicator runtime, libsecret and GStreamer using your distribution's package manager. Linux reminders require the app to be running; web reminders are not supported.
 
+## Windows 10 / 11 (x64)
+
+Download `Taskly-Setup-1.0.39.exe` (user-level installer, no administrator privileges required, TR/EN) or `taskly-1.0.39-windows-x64.zip` (portable archive) from [GitHub Releases (v1.0.39)](https://github.com/mebsoruhavuzu-boop/taskly/releases/tag/v1.0.39) and verify the SHA-256 checksum in PowerShell:
+
+```powershell
+Get-FileHash .\Taskly-Setup-1.0.39.exe -Algorithm SHA256
+# 806af0f4f5bdd9eaf69d5e3842783245912fbb7e230fbd634c748fa2b27e6b24
+
+Get-FileHash .\taskly-1.0.39-windows-x64.zip -Algorithm SHA256
+# 0266ddb03d02a0f8dd4c42496422a87d722fc557303f10c06c8e202b37c41541
+```
+
+Because the installer is not code-signed, Windows SmartScreen may show a warning on first launch — choose **More info → Run anyway** (TR: *Ek bilgi → Yine de çalıştır*). Windows reminders require the app to be running (closing the window minimizes Taskly to the system tray).
+
 ## 1.0.39 changes
 
 - Android: upgraded bottom ad bars to Anchored Adaptive Banners, improved inline native ad placement in long task lists, added smart load delays on secondary screens, and published `app-ads.txt` alongside dedicated GDPR support.
 - Linux 1.0.39-1 maintains full parity with all 1.0.38 features, Wayland/EGL fixes, and cloud sync.
+- Windows 1.0.39 (x64): official Windows Desktop release (`Taskly-Setup-1.0.39.exe` installer and `taskly-1.0.39-windows-x64.zip` portable bundle) with Google cloud sync, system tray support, single-instance guard, and local reminder notifications with alarm audio (ad-free).
 
 ## 1.0.38 changes
 
@@ -123,7 +139,7 @@ The current Linux/Arch binaries are distributed through the downloads page. Only
 
 Taskly updates are strictly synchronized across all distribution channels:
 1. **Google Play Store:** Official Android app releases (AAB/APK) and release notes (TR & EN, ≤500 chars).
-2. **Linux (Arch, Ubuntu/Debian, Fedora):** Arch package (`taskly-bin`), DEB and RPM packages built from the same release archive, `PKGBUILD`, `.SRCINFO`, and download archives on Firebase Hosting and GitHub Releases.
+2. **Linux (Arch, Ubuntu/Debian, Fedora) & Windows (x64):** Arch package (`taskly-bin`), DEB/RPM/tar.gz Linux packages, Windows installer (`Taskly-Setup-<ver>.exe`) and portable archive (`taskly-<ver>-windows-x64.zip`), `PKGBUILD`, `.SRCINFO`, and download archives on Firebase Hosting and GitHub Releases.
 3. **GitHub Repository:** `PKGBUILD`, `.SRCINFO`, **`README.md`** (this file — version number, package names, changelog section, and Turkish description must all be updated in the same commit as PKGBUILD/.SRCINFO).
 4. **Web Guide & Privacy Policy:** `https://taskly-notes.web.app/guide_taskly.html` and `privacy_taskly.html` — deployed to Firebase Hosting.
 
@@ -131,6 +147,6 @@ Whenever a new release is prepared, version tags, binaries, build recipes, and t
 
 ## Türkçe kısa bilgi
 
-Güncel Linux, Arch, Ubuntu/Debian (.deb) ve Fedora (.rpm) paketleri yukarıdaki indirme sayfasındadır; DEB ve RPM paketleri Ubuntu 24.04+, Debian 13+ ve Fedora 39+ gerektirir. Bu depo kurulum tarifini içerir; resmî AUR kaydı değildir. Aynı Google hesabıyla Android, Linux ve web görevleri eşitlenir. Tüm cihazları güncelleyin. Linux hatırlatıcıları uygulama çalışırken kullanılır; web hatırlatıcıları desteklenmez.
+Güncel Linux (Arch, `.deb`, `.rpm`, `.tar.gz`) ve Windows x64 (`Taskly-Setup-1.0.39.exe` kurulum paketi ve `taskly-1.0.39-windows-x64.zip` taşınabilir arşiv) paketleri yukarıdaki GitHub Releases ve indirme sayfasındadır; DEB ve RPM paketleri Ubuntu 24.04+, Debian 13+ ve Fedora 39+ gerektirir. Bu depo Linux kurulum tarifini ve sürüm dosyalarını içerir; resmî AUR kaydı değildir. Aynı Google hesabıyla Android, Linux, Windows ve web görevleri eşitlenir. Tüm cihazları güncelleyin. Linux ve Windows hatırlatıcıları uygulama açıkken veya sistem tepsisindeyken çalışır; web hatırlatıcıları desteklenmez.
 
-Sürüm 1.0.39 ile Android’de tam genişlikli Anchored Adaptive Banner, uzun listelerde akıllı yerel reklam yerleşimi ve `app-ads.txt`/GDPR iyileştirmeleri sunuldu; Linux ve web sürümleri reklamsızdır. Sürüm 1.0.38 ile arama ve sıralama üst çubuğa taşındı, koyu mod arama yazısı düzeltildi, Bugün ve Geciken hızlı filtreleri, göreve dokunarak düzenleme, alt görev kontrol listeleri (ilerleme rozetiyle) ve Tümü sekmesinde toplu seçim eklendi. Özel kategoriler 1.0.31 ve öncesinde tanınmaz; tüm cihazları 1.0.39'a güncelleyin.
+Sürüm 1.0.39 ile Android’de tam genişlikli Anchored Adaptive Banner, uzun listelerde akıllı yerel reklam yerleşimi ve `app-ads.txt`/GDPR iyileştirmeleri sunuldu; Windows x64 masaüstü sürümü eklendi; Linux, Windows ve web sürümleri reklamsızdır. Sürüm 1.0.38 ile arama ve sıralama üst çubuğa taşındı, koyu mod arama yazısı düzeltildi, Bugün ve Geciken hızlı filtreleri, göreve dokunarak düzenleme, alt görev kontrol listeleri (ilerleme rozetiyle) ve Tümü sekmesinde toplu seçim eklendi. Özel kategoriler 1.0.31 ve öncesinde tanınmaz; tüm cihazları 1.0.39'a güncelleyin.
